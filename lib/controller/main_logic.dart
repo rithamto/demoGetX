@@ -15,7 +15,7 @@ class MainLogic extends GetxController{
     url.value = await getImageURL();
   }
   
-  Future<dynamic> getImageURL() async {
+  Future<String> getImageURL() async {
     var client = HttpClient();
     var uri = Uri.parse('https://api.thecatapi.com/v1/images/search');
     HttpClientRequest request = await client.getUrl(uri);
